@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity2">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="321dp"
+            android:layout_height="598dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nome" android:hint="digite seu nome"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:inputType="number|textPersonName"
+                android:ems="10"
+                android:id="@+id/valor" android:hint="digite o valor a converter"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="86dp">
+            <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <RadioButton
+                        android:text="Dólar"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp" android:id="@+id/dolar" android:layout_weight="1"/>
+                <RadioButton
+                        android:text="Euro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:id="@+id/euro" android:layout_weight="1"/>
+                <RadioButton
+                        android:text="Libra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="86dp" android:id="@+id/libra" android:layout_weight="1"/>
+            </RadioGroup>
+        </LinearLayout>
+        <TextView
+                android:text="valor convertido"
+                android:layout_width="match_parent"
+                android:layout_height="89dp" android:id="@+id/tv_1"
+                android:gravity="center|center_horizontal|center_vertical" android:fontFamily="@font/calistoga"/>
+        <Button
+                android:text="volta a tela 1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tela_1" android:fontFamily="@font/calistoga"
+                android:textColor="#090808"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

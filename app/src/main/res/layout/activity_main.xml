@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="602dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="-3dp" tools:layout_editor_absoluteX="2dp">
+        <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="321dp" android:id="@+id/textView2"
+                android:text="para calcular o valor de  sua conversão va para proxíma tela"
+                android:gravity="center|center_vertical" android:textColor="#1C1A1A"
+                android:fontFamily="@font/calistoga" android:textColorHighlight="#972929"
+                android:textColorLink="#AC3030" android:textColorHint="#914848"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tela_2" android:hint="proxima tela"
+                android:fontFamily="@font/calistoga" android:text="próxima tela"
+                android:gravity="center|center_vertical"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
