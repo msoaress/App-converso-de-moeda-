@@ -7,6 +7,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import java.text.DecimalFormat;
+import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -35,13 +38,29 @@ public class MainActivity2 extends AppCompatActivity {
         dolar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try {
 
-                Double N1 =   Double.parseDouble(valor.getText().toString());
-                tv_1.setText(" ");
-                int resultado = (int) (N1 * 5.0642);
-                String nomeDigitado = nome.getText().toString();
-                tv_1.setText("Prezado(a): "+nomeDigitado + " se você tiver um salario de "+N1+
-                        " dolar você vai receber "+resultado+" reais por mês");
+
+                    Double N1 = Double.parseDouble(valor.getText().toString());
+                    tv_1.setText(" ");
+
+
+                    double resultado = N1 * 5.0642;
+
+                    DecimalFormat decimalFormat = new DecimalFormat("R$ #,###.00");
+                    String resultadoFormatado = decimalFormat.format(resultado);
+
+                    String nomeDigitado = nome.getText().toString();
+
+
+
+                    tv_1.setText("Prezado(a): " + nomeDigitado + " se você tiver um salario de " + N1 +
+                            " dólares você vai receber " + resultadoFormatado + " reais por mês");
+
+                } catch (Exception e) {
+                    tv_1.setText("Insira valores corretos!");
+                }
+
 
 
             }
@@ -51,25 +70,64 @@ public class MainActivity2 extends AppCompatActivity {
         euro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                try {
+
+
+
                 Double N1 =   Double.parseDouble(valor.getText().toString());
                 tv_1.setText(" ");
-                int resultado = (int) (N1 * 5.3087);
+                double resultado = N1 * 5.3087;
+
+                DecimalFormat decimalFormat = new DecimalFormat("R$ #,###.00");
+                String resultadoFormatado = decimalFormat.format(resultado);
+
                 String nomeDigitado = nome.getText().toString();
                 tv_1.setText("Prezado(a): "+nomeDigitado + " se você tiver um salario de "+N1+
-                        " euros você vai receber "+resultado+" reais por mês");
-            }
+                        " euros você vai receber "+resultadoFormatado+" reais por mês");
+
+
+
+
+
+            }catch (Exception e) {
+                    tv_1.setText("Insira valores corretos!");
+                }
+
+        }
+
+
+
+
         });
 
         libra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                try {
+
+
+
                 Double N1 =   Double.parseDouble(valor.getText().toString());
                 tv_1.setText(" ");
-                int resultado = (int) (N1 * 6.11);
+                double resultado = N1 * 6.1187;
+
+                DecimalFormat decimalFormat = new DecimalFormat("R$ #,###.00");
+                String resultadoFormatado = decimalFormat.format(resultado);
+
                 String nomeDigitado = nome.getText().toString();
                 tv_1.setText("Prezado(a): "+nomeDigitado + " se você tiver um salario de "+N1+
-                        " libra você vai receber "+resultado+" reais por mês");            }
+                        " libras você vai receber "+resultadoFormatado+" reais por mês");
+
+                }catch (Exception e) {
+                    tv_1.setText("Insira valores corretos!");
+                }
+
+            }
         });
+
+
 
 
         tela_1.setOnClickListener(new View.OnClickListener() {

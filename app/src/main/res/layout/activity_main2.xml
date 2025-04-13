@@ -9,8 +9,8 @@
 
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="321dp"
-            android:layout_height="598dp"
+            android:layout_width="300dp"
+            android:layout_height="500dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent">
         <EditText
@@ -52,7 +52,7 @@
                 android:layout_height="89dp" android:id="@+id/tv_1"
                 android:gravity="center|center_horizontal|center_vertical" android:fontFamily="@font/calistoga"/>
         <Button
-                android:text="volta a tela 1"
+                android:text="retornar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/tela_1" android:fontFamily="@font/calistoga"
                 android:textColor="#090808"/>

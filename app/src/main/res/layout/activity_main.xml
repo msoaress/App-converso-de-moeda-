@@ -5,24 +5,27 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:visibility="visible">
     <LinearLayout
-            android:layout_width="320dp"
-            android:layout_height="602dp"
+            android:layout_width="300dp"
+            android:layout_height="500dp"
             android:orientation="vertical"
-            tools:layout_editor_absoluteY="-3dp" tools:layout_editor_absoluteX="2dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
         <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="321dp" android:id="@+id/textView2"
-                android:text="para calcular o valor de  sua conversão va para proxíma tela"
+                android:text="para calcular o valor de  sua conversão vá para conversor de moedas."
                 android:gravity="center|center_vertical" android:textColor="#1C1A1A"
                 android:fontFamily="@font/calistoga" android:textColorHighlight="#972929"
                 android:textColorLink="#AC3030" android:textColorHint="#914848"/>
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/tela_2" android:hint="proxima tela"
-                android:fontFamily="@font/calistoga" android:text="próxima tela"
+                android:fontFamily="@font/calistoga" android:text="conversor de moedas"
                 android:gravity="center|center_vertical"/>
     </LinearLayout>
 
